@@ -1,3 +1,4 @@
+//import mysql2
 const mysql = require('mysql2');
 
 require('dotenv').config();
@@ -6,11 +7,10 @@ require('dotenv').config();
 const db = mysql.createConnection(
     {
       host: 'localhost',
-      port: 3001,
+      port: 3306,
 
       //use values stored in .env file
       user: process.env.DB_USER,
-      // Your MySQL password
       password: process.env.DB_PW,
       database: process.env.DB_NAME
     },
